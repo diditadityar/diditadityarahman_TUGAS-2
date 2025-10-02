@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>PERSONAL WEB DIDIT</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile-section">
+        <div class="profile-pic">
+          <img src="images/FOTO PROFIL.jpg" alt="Foto Profil" />
+        </div>
+
+        <div class="profile-info">
+          <h2>Didit Aditya Rahman</h2>
+          <p>102022400066 / Fakultas Rekayasa Industri / S1 Sistem Informasi</p>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://wa.me/082126155622" target="_blank"
+            ><i class="bx bxl-whatsapp"></i
+          ></a>
+          <a href="https://github.com/diditadityar/diditadityarahman_TUGAS-2" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://instagram.com/" target="_blank"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+        </div>
+
+        <div class="datetime">
+          <p id="date-time"></p>
+        </div>
+      </div>
+
+      <div class="table-section">
+        <h3>Daftar Mata Kuliah</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Mata Kuliah</th>
+              <th>SKS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PENGEMBANGAN APLIKASI WEBSITE</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>ANALISIS & PERANCANGAN SISTEM INFORMASI</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>ETIKA & PROFESI</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>PERMODELAN PROSES BISNIS</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      function updateDateTime() {
+        const now = new Date();
+        const options = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        };
+        document.getElementById("date-time").textContent =
+          now.toLocaleDateString("id-ID", options);
+      }
+
+      updateDateTime();
+      setInterval(updateDateTime, 1000);
+    </script>
+  </body>
+</html>
